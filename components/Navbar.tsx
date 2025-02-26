@@ -20,7 +20,7 @@ interface NavSection {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null)
-  // const { theme } = useTheme()
+  
 
   const navSections: NavSection[] = [
     {
@@ -73,7 +73,8 @@ const Navbar = () => {
     {
       title: "Gallery",
       href: "/gallery"
-    }
+    },
+  
 
   ]
 

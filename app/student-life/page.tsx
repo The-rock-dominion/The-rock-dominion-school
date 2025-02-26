@@ -1,4 +1,4 @@
-
+import Image from 'next/image';
 import React from 'react';
 import {  Book,  Building, Laptop} from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
@@ -24,7 +24,7 @@ const StudentLife = () => {
     <div className="min-h-screen bg-background">
       <section className="relative h-[70vh] bg-primary overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/80" />
-        <img 
+        <Image
           src="/slide 3.jpg" 
           alt="Students in campus" 
           className="w-full h-full object-cover scale-105 animate-slow-zoom"

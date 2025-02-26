@@ -62,9 +62,7 @@
   .bg-background {
     background-color: hsl(var(--background));
     background-image: 
-      /* Base layer with rockets */
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 24 24' fill='none' stroke='rgba(66, 133, 244, 0.05)' stroke-width='1'%3E%3Cpath d='M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z'%3E%3C/path%3E%3Cpath d='m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z'%3E%3C/path%3E%3Cpath d='M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0'%3E%3C/path%3E%3Cpath d='M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5'%3E%3C/path%3E%3C/svg%3E"),
-      /* Subtle grid for structure */
       linear-gradient(
         rgba(66, 133, 244, 0.02) 1px,
         transparent 1px
@@ -87,9 +85,7 @@
   .bg-primary {
     background-color: hsl(var(--primary));
     background-image: 
-      /* Graduation caps pattern */
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='rgba(255, 255, 255, 0.1)' stroke-width='1'%3E%3Cpath d='M22 10v6M2 10l10-5 10 5-10 5z'%3E%3C/path%3E%3Cpath d='M6 12v5c3 3 9 3 12 0v-5'%3E%3C/path%3E%3C/svg%3E"),
-      /* Overlay gradient */
       linear-gradient(
         120deg,
         rgba(255, 255, 255, 0.1),
@@ -119,9 +115,7 @@
   .hero-pattern {
     background-color: hsl(var(--primary));
     background-image: 
-      /* Books pattern */
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='rgba(255, 255, 255, 0.1)' stroke-width='1'%3E%3Cpath d='M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20'%3E%3C/path%3E%3C/svg%3E"),
-      /* Overlay gradient */
       linear-gradient(
         120deg,
         rgba(var(--primary), 0.9),
@@ -130,6 +124,15 @@
     background-size: 50px 50px, 100% 100%;
     position: relative;
     overflow: hidden;
+  }
+
+  /* Background image utilities */
+  .bg-school-pattern {
+    background-image: url("/school-pattern.png");
+  }
+
+  .bg-placeholder {
+    background-image: url("/api/placeholder/1920/1080");
   }
 }
 

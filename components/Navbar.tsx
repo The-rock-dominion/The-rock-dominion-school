@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import { useState } from "react"
-import { useTheme } from "next-themes"
 import { Menu, X, ChevronDown } from "lucide-react"
 import ThemeToggle from "./modeToggle"
 

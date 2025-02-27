@@ -1,15 +1,26 @@
+
 "use client"
 
 import React, { useState, useMemo } from 'react';
 import {
-  Heart, Users, Trophy, Star, Clock, Medal,
-  Shield, Lightbulb, Brain, HandHeart, Rocket
+  Heart,
+  Users,
+  Trophy,
+  Star,
+  Clock,
+  Medal,
+  Shield,
+  Lightbulb,
+  Brain,
+  HandHeart,
+  Rocket,
+  LucideProps
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 interface CoreValue {
   value: string;
-  icon: React.ReactElement;
+  icon: React.ReactElement<LucideProps>;
   description?: string;
 }
 
@@ -26,21 +37,21 @@ interface ValueCardProps {
 }
 
 const coreValues: readonly CoreValue[] = [
-  { value: "Tenacity", icon: <Trophy /> },
-  { value: "Honesty", icon: <Shield /> },
-  { value: "Excellence", icon: <Star /> },
-  { value: "Respect", icon: <HandHeart /> },
-  { value: "Originality", icon: <Lightbulb /> },
-  { value: "Confidence", icon: <Medal /> },
-  { value: "Knowledge", icon: <Brain /> },
-  { value: "Discipline", icon: <Clock /> },
-  { value: "Optimism", icon: <Heart /> },
-  { value: "Mentorship", icon: <Users /> },
-  { value: "Integrity", icon: <Shield /> },
-  { value: "Nurturing", icon: <HandHeart /> },
-  { value: "Innovation", icon: <Lightbulb /> },
-  { value: "Opportunity", icon: <Rocket /> },
-  { value: "Nobility", icon: <Trophy /> }
+  { value: "Tenacity", icon: <Trophy size={32} aria-hidden="true" /> },
+  { value: "Honesty", icon: <Shield size={32} aria-hidden="true" /> },
+  { value: "Excellence", icon: <Star size={32} aria-hidden="true" /> },
+  { value: "Respect", icon: <HandHeart size={32} aria-hidden="true" /> },
+  { value: "Originality", icon: <Lightbulb size={32} aria-hidden="true" /> },
+  { value: "Confidence", icon: <Medal size={32} aria-hidden="true" /> },
+  { value: "Knowledge", icon: <Brain size={32} aria-hidden="true" /> },
+  { value: "Discipline", icon: <Clock size={32} aria-hidden="true" /> },
+  { value: "Optimism", icon: <Heart size={32} aria-hidden="true" /> },
+  { value: "Mentorship", icon: <Users size={32} aria-hidden="true" /> },
+  { value: "Integrity", icon: <Shield size={32} aria-hidden="true" /> },
+  { value: "Nurturing", icon: <HandHeart size={32} aria-hidden="true" /> },
+  { value: "Innovation", icon: <Lightbulb size={32} aria-hidden="true" /> },
+  { value: "Opportunity", icon: <Rocket size={32} aria-hidden="true" /> },
+  { value: "Nobility", icon: <Trophy size={32} aria-hidden="true" /> }
 ] as const;
 
 const ValueCard: React.FC<ValueCardProps> = React.memo(({ value, index, isHovered, onHover }) => (
@@ -64,10 +75,11 @@ const ValueCard: React.FC<ValueCardProps> = React.memo(({ value, index, isHovere
         className="text-primary transform transition-transform duration-300 
                    group-hover:scale-110 group-hover:rotate-6"
       >
-        {React.cloneElement(value.icon, { 
-          className: 'w-8 h-8',
-          'aria-hidden': true 
-        })}
+        {React.cloneElement(value.icon, {
+          ...value.icon.props,
+          className: `w-8 h-8 ${value.icon.props.className || ''}`.trim(),
+          'aria-hidden': true
+        } as LucideProps)}
       </div>
       <p 
         className="font-bold text-lg text-center group-hover:text-primary 
@@ -102,7 +114,11 @@ const CoreValues: React.FC<CoreValuesProps> = ({ id, className = '' }) => {
   );
 
   return (
-    <section id={id} className={`mb-20 ${className}`}>
+    <section 
+      id={id} 
+      className={`mb-20 ${className}`.trim()}
+      aria-labelledby="core-values-title"
+    >
       <Card className="shadow-xl overflow-hidden">
         <div 
           className="absolute inset-0 bg-gradient-to-br from-primary/5 
@@ -111,6 +127,7 @@ const CoreValues: React.FC<CoreValuesProps> = ({ id, className = '' }) => {
         />
         <CardContent className="p-12 relative">
           <h2 
+            id="core-values-title"
             className="text-4xl font-bold mb-8 text-center bg-gradient-to-r 
                        from-primary via-primary/90 to-primary bg-clip-text 
                        text-transparent"
@@ -122,7 +139,11 @@ const CoreValues: React.FC<CoreValuesProps> = ({ id, className = '' }) => {
             we uphold. Each letter stands for a fundamental principle that 
             defines our school community:
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+          <div 
+            className="grid grid-cols-2 md:grid-cols-5 gap-6"
+            role="list"
+            aria-label="Core values grid"
+          >
             {valueCards}
           </div>
         </CardContent>

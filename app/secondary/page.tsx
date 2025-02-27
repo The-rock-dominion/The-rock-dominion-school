@@ -82,6 +82,14 @@ export default function SecondarySchoolPage() {
             className="inline-flex px-6 py-3 rounded-md text-lg font-semibold bg-blue-500 hover:bg-primary/90 text-primary-foreground transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
             Apply Now
+          </Link> <br/>
+          <Link
+          href="/primary"
+          className="text-primary pt-10"
+    
+          >
+           
+           Primary
           </Link>
         </section>
       </main>

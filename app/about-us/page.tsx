@@ -65,9 +65,9 @@ const AboutUsPage: React.FC = () => {
                 <MissionVisionSection id='mission-vision' />
                 <CoreValues id='core-values'/>
                 <PrincipalMessage id='principals-message'/>
-                <OurTeam />
-                <Vacancies />
-                <AccredictionAffiliation />
+                <OurTeam  id='our-team'/>
+                <Vacancies id='vacancies' />
+                <AccredictionAffiliation id='accreditation-affiliation' />
                 <Faq id='faqs'/>
             </main>
         </div>

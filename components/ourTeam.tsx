@@ -2,7 +2,11 @@ import React from 'react';
 import { Users, Award, BookOpen, Heart, Shield } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 
-const OurTeam = () => {
+interface OurTeamProps{
+  id?:string
+
+}
+const OurTeam = ({id}:OurTeamProps) => {
   const teamStats = [
     { icon: <Users className="w-6 h-6" />, count: "20+", label: "Expert Teachers" },
     { icon: <Award className="w-6 h-6" />, count: "15+", label: "Years Experience" },
@@ -19,7 +23,7 @@ const OurTeam = () => {
   ];
 
   return (
-    <section id="our-team" className="relative py-16 overflow-hidden bg-background">
+    <section id={id} className="relative py-16 overflow-hidden bg-background">
       {/* Decorative elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
       <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />

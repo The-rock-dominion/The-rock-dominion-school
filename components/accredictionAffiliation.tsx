@@ -3,7 +3,10 @@ import { motion } from 'framer-motion';
 import { Award, Globe, HandshakeIcon, Shield } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 
-const AccreditationAffiliation = () => {
+interface AccredictionAffiliationProps{
+  id?:string
+}
+const AccreditationAffiliation = ({id}:AccredictionAffiliationProps) => {
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -35,7 +38,7 @@ const AccreditationAffiliation = () => {
     <motion.section
       initial="initial"
       animate="animate"
-      id="accreditation-affiliation"
+      id={id}
       className="relative min-h-screen py-16 px-4 overflow-hidden"
     >
       {/* Decorative Background Elements */}

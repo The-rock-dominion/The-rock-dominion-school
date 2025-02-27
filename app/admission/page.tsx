@@ -1,3 +1,4 @@
+
 "use client"
 
 import Image from "next/image";
@@ -24,33 +25,37 @@ interface FeatureCardProps {
 }
 
 const ProcessStep = ({ number, title, description, icon }: ProcessStepProps) => (
-  <div className="relative flex items-start gap-4 p-8 bg-background/50 backdrop-blur-sm rounded-xl 
-                  border border-border/50 hover:border-primary/20 transition-all duration-300 group">
-    <div className="absolute -top-4 -left-4 w-10 h-10 bg-primary text-primary-foreground rounded-xl 
-                    flex items-center justify-center font-bold shadow-lg group-hover:scale-110 transition-transform">
+  <div className="relative flex flex-col sm:flex-row items-start gap-4 p-4 sm:p-8 bg-background/50 
+                  backdrop-blur-sm rounded-xl border border-border/50 hover:border-primary/20 
+                  transition-all duration-300 group">
+    <div className="absolute -top-4 -left-4 w-8 h-8 sm:w-10 sm:h-10 bg-primary text-primary-foreground 
+                    rounded-xl flex items-center justify-center font-bold shadow-lg 
+                    group-hover:scale-110 transition-transform">
       {number}
     </div>
-    <div className="mt-4 p-4 rounded-xl bg-primary/10 ring-1 ring-primary/20 group-hover:bg-primary/15 transition-colors">
+    <div className="mt-4 p-3 sm:p-4 rounded-xl bg-primary/10 ring-1 ring-primary/20 
+                    group-hover:bg-primary/15 transition-colors">
       {icon}
     </div>
     <div className="flex-1">
-      <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+      <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 
+                     bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
         {title}
       </h3>
-      <p className="text-muted-foreground leading-relaxed">{description}</p>
+      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{description}</p>
     </div>
   </div>
 );
 
 const FeatureCard = ({ icon, title, description }: FeatureCardProps) => (
-  <div className="p-6 rounded-xl bg-background/50 backdrop-blur-sm border border-border/50 
+  <div className="p-4 sm:p-6 rounded-xl bg-background/50 backdrop-blur-sm border border-border/50 
                   hover:border-primary/20 transition-all duration-300 group">
-    <div className="p-4 rounded-xl bg-primary/10 ring-1 ring-primary/20 w-fit mb-4 
+    <div className="p-3 sm:p-4 rounded-xl bg-primary/10 ring-1 ring-primary/20 w-fit mb-4 
                     group-hover:bg-primary/15 transition-colors">
       {icon}
     </div>
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
-    <p className="text-muted-foreground">{description}</p>
+    <h3 className="text-lg sm:text-xl font-semibold mb-2">{title}</h3>
+    <p className="text-sm sm:text-base text-muted-foreground">{description}</p>
   </div>
 );
 
@@ -115,31 +120,37 @@ const AdmissionPage = () => {
     }
   ];
 
+  
+
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <section className="relative h-[85vh] bg-primary overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative min-h-[60vh] sm:h-[85vh] bg-primary overflow-hidden">
         <div className="absolute inset-0 bg-[url('/school-pattern.png')] opacity-5" />
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90" />
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 25%)'
         }} />
-        <div className="container relative z-10 h-full flex flex-col justify-center text-primary-foreground px-4">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm
-                        border border-white/10 hover:bg-white/15 transition-colors duration-200 w-fit mb-8">
-            <School className="h-4 w-4" />
-            <span className="text-sm font-medium">2024-25 Admissions Open</span>
+        <div className="container relative z-10 h-full flex flex-col justify-center text-primary-foreground 
+                        px-4 py-16 sm:py-0">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full 
+                         bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/15 
+                         transition-colors duration-200 w-fit mb-6 sm:mb-8">
+            <School className="h-3 w-3 sm:h-4 sm:w-4" />
+            <span className="text-xs sm:text-sm font-medium">2024-25 Admissions Open</span>
           </div>
-          <h1 className="text-6xl md:text-7xl font-bold leading-tight tracking-tight mb-6">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tight mb-4 sm:mb-6">
             Welcome to<br />
             <span className="text-white/90">The Rock Dominion</span>
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/80 max-w-2xl leading-relaxed mb-8">
+          <p className="text-lg sm:text-xl md:text-2xl text-primary-foreground/80 max-w-2xl 
+                        leading-relaxed mb-6 sm:mb-8">
             Join our prestigious academic community in Ota, where we nurture future leaders through 
             our innovative Nigerian-American curriculum.
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Button 
-              className="bg-white text-primary hover:bg-white/90 rounded-full px-8"
+              className="bg-white text-primary hover:bg-white/90 rounded-full px-6 sm:px-8 w-full sm:w-auto"
               size="lg"
             >
               Apply Now
@@ -147,7 +158,8 @@ const AdmissionPage = () => {
             </Button>
             <Button 
               variant="outline" 
-              className="rounded-full px-8 border-white/20 text-white hover:bg-white/10"
+              className="rounded-full px-6 sm:px-8 border-white/20 text-white hover:bg-white/10 
+                         w-full sm:w-auto"
               size="lg"
             >
               Download Prospectus
@@ -157,7 +169,6 @@ const AdmissionPage = () => {
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </section>
-
       <main className="container mx-auto px-4 py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
           {[
@@ -191,13 +202,14 @@ const AdmissionPage = () => {
           ))}
         </div>
 
-        <section className="mb-24">
+        <section className="mb-24" id="our-policy">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
               Why Choose The Rock Dominion?
             </h2>
             <p className="text-lg text-muted-foreground">
-              We provide a world-class education that prepares students for global success while maintaining strong local values.
+              We provide a world-class education that prepares students
+               for global success while maintaining strong local values.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -206,41 +218,63 @@ const AdmissionPage = () => {
             ))}
           </div>
         </section>
+        <section className="mb-16 sm:mb-24" id="our-policy">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-primary 
+                          to-primary/80 bg-clip-text text-transparent">
+              Why Choose The Rock Dominion?
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground">
+              We provide a world-class education that prepares students for global success while 
+              maintaining strong local values.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {features.map((feature, index) => (
+              <FeatureCard key={index} {...feature} />
+            ))}
+          </div>
+        </section>
 
-        <section className="mb-24">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+        {/* Admission Process Section */}
+        <section className="mb-16 sm:mb-24" id="admission-process">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-primary 
+                          to-primary/80 bg-clip-text text-transparent">
               Admission Process
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base sm:text-lg text-muted-foreground">
               Our comprehensive admission process ensures we find students who will thrive in our 
               challenging and supportive academic environment.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
             {admissionSteps.map((step) => (
               <ProcessStep key={step.number} {...step} />
             ))}
           </div>
         </section>
 
-        <section className="mb-24">
+        {/* International Students Section */}
+        <section className="mb-16 sm:mb-24" id="international-admission">
           <Card className="bg-gradient-to-br from-card/50 to-card border-0">
             <CardHeader>
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex items-center gap-4 mb-4 sm:mb-6">
                 <div className="p-3 rounded-xl bg-primary/10 ring-1 ring-primary/20">
-                  <Globe className="h-6 w-6 text-primary" />
+                  <Globe className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-primary 
+                              to-primary/80 bg-clip-text text-transparent">
                   International Students
                 </h2>
               </div>
             </CardHeader>
-            <CardContent className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <p className="text-lg text-muted-foreground">
+            <CardContent className="grid md:grid-cols-2 gap-6 sm:gap-8">
+              <div className="space-y-4 sm:space-y-6">
+                <p className="text-base sm:text-lg text-muted-foreground">
                   We welcome international students to join our diverse community. Additional requirements include:
                 </p>
+
                 <ul className="space-y-4">
                   {[
                     "English proficiency (TOEFL/IELTS)",
@@ -254,12 +288,12 @@ const AdmissionPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Button className="rounded-full" size="lg">
+                <Button className="rounded-full w-full sm:w-auto" size="lg">
                   International Student Guide
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
-              <div className="relative">
+              <div className="relative hidden sm:block">
                 <div className="aspect-video rounded-xl overflow-hidden">
                   <Image 
                     src="/api/placeholder/600/400" 
@@ -270,15 +304,15 @@ const AdmissionPage = () => {
                     priority
                   />
                 </div>
-                <div className="absolute -bottom-6 -right-6 bg-background p-6 rounded-xl shadow-lg
-                              border border-border/50">
+                <div className="absolute -bottom-6 -right-6 bg-background p-4 sm:p-6 rounded-xl 
+                              shadow-lg border border-border/50">
                   <div className="flex items-center gap-4">
-                    <div className="p-3 rounded-xl bg-primary/10 ring-1 ring-primary/20">
-                      <Calendar className="h-6 w-6 text-primary" />
+                    <div className="p-2 sm:p-3 rounded-xl bg-primary/10 ring-1 ring-primary/20">
+                      <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                     </div>
                     <div>
                       <p className="font-semibold">Virtual Tour</p>
-                      <p className="text-sm text-muted-foreground">Every Wednesday</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Every Wednesday</p>
                     </div>
                   </div>
                 </div>
@@ -287,14 +321,16 @@ const AdmissionPage = () => {
           </Card>
         </section>
 
-        <section className="mb-24">
+        {/* Tuition Section */}
+        <section className="mb-16 sm:mb-24" id="school-fees">
           <Card className="bg-gradient-to-br from-card/50 to-card border-0">
             <CardHeader>
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex items-center gap-4 mb-4 sm:mb-6">
                 <div className="p-3 rounded-xl bg-primary/10 ring-1 ring-primary/20">
-                  <CreditCard className="h-6 w-6 text-primary" />
+                  <CreditCard className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-primary 
+                              to-primary/80 bg-clip-text text-transparent">
                   Tuition & Fees
                 </h2>
               </div>
@@ -330,16 +366,17 @@ const AdmissionPage = () => {
           </Card>
         </section>
 
-        <section className="relative rounded-2xl overflow-hidden bg-primary p-12 text-primary-foreground">
+        <section className="relative rounded-2xl overflow-hidden bg-primary p-6 sm:p-12 
+                          text-primary-foreground" id="apply-online">
           <div className="absolute inset-0 bg-[url('/school-pattern.png')] opacity-5" />
           <div className="relative z-10 text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Ready to Join Our Community?</h2>
-            <p className="text-lg mb-8 text-primary-foreground/90">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Ready to Join Our Community?</h2>
+            <p className="text-base sm:text-lg mb-6 sm:mb-8 text-primary-foreground/90">
               Take the first step towards an exceptional education experience at The Rock Dominion.
             </p>
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button 
-                className="bg-white text-primary hover:bg-white/90 rounded-full px-6"
+                className="bg-white text-primary hover:bg-white/90 rounded-full px-6 w-full sm:w-auto"
                 size="lg"
               >
                 Apply Now
@@ -347,7 +384,8 @@ const AdmissionPage = () => {
               </Button>
               <Button 
                 variant="outline" 
-                className="rounded-full px-6 border-white/20 text-white hover:bg-white/10"
+                className="rounded-full px-6 border-white/20 text-white hover:bg-white/10 
+                           w-full sm:w-auto"
                 size="lg"
               >
                 Download Prospectus

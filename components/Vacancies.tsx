@@ -4,9 +4,12 @@ import {
  } from "lucide-react"
   import { Card, CardHeader, CardContent } from "@/components/ui/card"
   
-const Vacancies = () => {
+interface VacanciesProps{
+  id?:string
+}
+const Vacancies = ({id}:VacanciesProps) => {
   return (
-    <section className="mb-20">
+    <section className="mb-20" id={id}>
           <Card className="hover:shadow-xl transition-shadow duration-300">
             <CardHeader className="text-center p-8">
               <Briefcase className="w-16 h-16 mx-auto mb-4 text-primary" />

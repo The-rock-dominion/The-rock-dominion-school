@@ -8,8 +8,8 @@ import type React from "react"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Riverside Schools",
-  description: "Welcome to Riverside Primary and Secondary Schools",
+  title: "The Rock Dominion School",
+  description: "The Rock Dominion School",
 }
 
 export default function RootLayout({

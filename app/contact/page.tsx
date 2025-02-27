@@ -60,7 +60,7 @@ const ContactPage: React.FC = () => {
     {
       icon: <Phone className="h-6 w-6 text-primary" />,
       title: "Call Us",
-      info: "+234 XXX XXX XXXX",
+      info: "+234-702-562-5816",
       action: "Call now"
     },
     {

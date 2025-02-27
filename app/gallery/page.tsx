@@ -28,17 +28,17 @@ const galleryCategories: GalleryCategory[] = [
       {
         title: 'Science Experiments',
         description: 'Hands-on experiments in fully-equipped laboratories',
-        image: '/api/placeholder/400/300'
+        image: '/slide 2.jpg'
       },
       {
         title: 'Computer Labs',
         description: 'Interactive lessons in modern computer facilities',
-        image: '/api/placeholder/400/300'
+        image: '/slide 3.jpg'
       },
       {
         title: 'Library Resources',
         description: 'Access to physical and digital learning materials',
-        image: '/api/placeholder/400/300'
+        image: '/school class rock.jpg'
       }
     ]
   },
@@ -50,17 +50,17 @@ const galleryCategories: GalleryCategory[] = [
       {
         title: 'Quiz Competitions',
         description: 'Inter-school academic challenges',
-        image: '/api/placeholder/400/300'
+        image: '/school building 2.jpg'
       },
       {
         title: 'Cultural Day',
         description: "Celebrating Nigeria's rich cultural heritage",
-        image: '/api/placeholder/400/300'
+        image: '/cultural day.jpg'
       },
       {
         title: 'Inter-House Sports',
         description: 'Track and field events, football, basketball matches',
-        image: '/api/placeholder/400/300'
+        image: '/school building 4.jpg'
       }
     ]
   },
@@ -72,22 +72,22 @@ const galleryCategories: GalleryCategory[] = [
       {
         title: 'Farming and Agriculture',
         description: 'Sustainable farming methods and crop cultivation',
-        image: '/api/placeholder/400/300'
+        image: '/happy student.jpg'
       },
       {
         title: 'Fashion Designing',
         description: 'Sewing, embroidery, and garment design',
-        image: '/api/placeholder/400/300'
+        image: '/primary.jpg'
       },
       {
         title: 'Culinary Arts',
         description: 'Cooking classes and baking sessions',
-        image: '/api/placeholder/400/300'
+        image: '/primary 2.jpg'
       },
       {
         title: 'Digital Skills',
         description: 'ICT training and web development',
-        image: '/api/placeholder/400/300'
+        image: '/school building 3.jpg'
       }
     ]
   }
@@ -99,7 +99,7 @@ const GalleryPage = () => {
       <section className="relative h-[70vh] overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/api/placeholder/1920/1080"
+            src="/gallerybg.jpg"
             alt="Gallery Hero"
             className="object-cover"
             fill

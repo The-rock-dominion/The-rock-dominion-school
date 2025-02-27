@@ -5,32 +5,32 @@ import Link from "next/link"
 const secondarySchoolAspects = [
   {
     title: "Academic Excellence",
-    image: "/secondary-academic.jpg",
+    image: "/secondaryschool.jpg",
     description: "Rigorous curriculum and dedicated faculty",
   },
   {
     title: "Sports Programs",
-    image: "/secondary-sports.jpg",
+    image: "/Happy student.jpg",
     description: "Diverse athletic opportunities for all students",
   },
   {
     title: "Arts and Culture",
-    image: "/secondary-arts.jpg",
+    image: "/slide 2.jpg",
     description: "Vibrant arts scene and cultural activities",
   },
   {
     title: "Science and Technology",
-    image: "/secondary-science.jpg",
+    image: "/school building 4.jpg",
     description: "State-of-the-art labs and innovative programs",
   },
   {
     title: "Community Service",
-    image: "/secondary-community.jpg",
+    image: "/cultural day.jpg",
     description: "Engaging students in local and global initiatives",
   },
   {
     title: "Student Life",
-    image: "/secondary-student-life.jpg",
+    image: "/Gallerybg.jpg",
     description: "Rich extracurricular activities and events",
   },
 ]
@@ -38,9 +38,9 @@ const secondarySchoolAspects = [
 export default function SecondarySchoolPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="bg-primary text-primary-foreground py-12">
+      <header className="bg-primary text-primary-foreground py-40">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Riverside Secondary School</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">The Rock Dominion Secondary School</h1>
           <p className="text-xl md:text-2xl">Empowering minds, Shaping futures</p>
         </div>
       </header>

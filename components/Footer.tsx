@@ -7,15 +7,15 @@ const Footer = () => {
       <div className="grid md:grid-cols-3 gap-8">
         <div>
           <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
-          <p>123 Riverside Lane</p>
-          <p>Riverside City, RC 12345</p>
-          <p>Phone: (123) 456-7890</p>
+          <p>  16, Araromi, Ikeshi, Elejigbo, </p>
+          <p>Obasanjo Farm, Ota, Ogun State</p>
+          <p>Phone:+2347025625816</p>
         </div>
         <div>
           <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
           <ul>
             <li>
-              <Link href="/about" className="hover:underline">
+              <Link href="/about-us" className="hover:underline">
                 About Us
               </Link>
             </li>
@@ -25,8 +25,8 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="/events" className="hover:underline">
-                Events
+              <Link href="/student-life" className="hover:underline">
+               Students Life
               </Link>
             </li>
           </ul>

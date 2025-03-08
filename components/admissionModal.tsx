@@ -53,7 +53,7 @@ const AdmissionModal = () => {
               {/* Content - Using regular img tag instead of Next.js Image */}
               <div className="relative">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/THE%20ROCK%20NEW%20BANNER.JPG-LksAqO6dhV2MFPdQXURD2qcEKHvJy2.jpeg"
+                  src="/THE ROCK NEW BANNER.JPG"
                   alt="The Rock Dominion Schools Admission"
                   className="w-full h-auto"
                 />

@@ -149,7 +149,7 @@ const StudentLife = () => {
           <h3 className="text-4xl md:text-5xl text-primary
           font-bold
            mb-8 ">Begin Your Journey</h3>
-          <p className="mb-12 text-lg text-secondary max-w-2xl mx-auto">
+          <p className="mb-12 text-lg dark:text-secondary text-blue-400 max-w-2xl mx-auto">
             Join a community dedicated to academic excellence and personal growth
           </p>
           <button className="group bg-white text-primary px-10 py-4 rounded-full font-bold text-lg 

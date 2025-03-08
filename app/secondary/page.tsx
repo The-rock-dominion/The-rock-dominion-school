@@ -5,7 +5,7 @@ import Link from "next/link"
 const secondarySchoolAspects = [
   {
     title: "Academic Excellence",
-    image: "/secondaryschool.jpg",
+    image: "/SS class.jpg",
     description: "Rigorous curriculum and dedicated faculty",
   },
   {
@@ -15,7 +15,7 @@ const secondarySchoolAspects = [
   },
   {
     title: "Arts and Culture",
-    image: "/slide 2.jpg",
+    image: "/Cultural day 4.jpg",
     description: "Vibrant arts scene and cultural activities",
   },
   {
@@ -25,12 +25,12 @@ const secondarySchoolAspects = [
   },
   {
     title: "Community Service",
-    image: "/cultural day.jpg",
+    image: "/secondar-award.jpg",
     description: "Engaging students in local and global initiatives",
   },
   {
     title: "Student Life",
-    image: "/Gallerybg.jpg",
+    image: "/teacher secondary.jpg",
     description: "Rich extracurricular activities and events",
   },
 ]
@@ -38,13 +38,16 @@ const secondarySchoolAspects = [
 export default function SecondarySchoolPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="bg-primary text-primary-foreground py-40">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">The Rock Dominion Secondary School</h1>
-          <p className="text-xl md:text-2xl">Empowering minds, Shaping futures</p>
+      <header className="relative bg-blue text-primary-foreground py-40">
+        <div className="absolute inset-0">
+          <Image src="/secondary banner.jpg" alt="Header Background" layout="fill" objectFit="cover" className="opacity-50" />
+        </div>
+        <div className="relative container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">The Rock Dominion Secondary School</h1>
+          <p className="text-xl md:text-2xl drop-shadow-md">Empowering minds, Shaping futures</p>
         </div>
       </header>
-      <WaveDivider/>
+      <WaveDivider />
       <main className="container mx-auto px-4 py-12">
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">Welcome to The Rock Dominion Secondary</h2>
@@ -57,7 +60,6 @@ export default function SecondarySchoolPage() {
             Explore the various aspects of our school below and discover The Rock Dominion Secondary difference.
           </p>
         </section>
-     
 
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {secondarySchoolAspects.map((aspect, index) => (
@@ -96,4 +98,3 @@ export default function SecondarySchoolPage() {
     </div>
   )
 }
-

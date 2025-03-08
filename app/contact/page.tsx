@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react';
@@ -12,7 +11,7 @@ import {
   Facebook, 
   Instagram, 
   Twitter, 
-  Linkedin,
+  Youtube,
   ArrowRight, 
   GraduationCap, 
   School 
@@ -20,6 +19,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import WhatsappIcon from "@/components/WhatsappIcon"; // Import the custom WhatsappIcon
 
 interface SocialLink {
   icon: React.FC<{ className?: string }>;
@@ -45,9 +45,10 @@ const ContactPage: React.FC = () => {
 
   const socialLinks: SocialLink[] = [
     { icon: Facebook, label: "Facebook", href: "#" },
-    { icon: Instagram, label: "Instagram", href: "#" },
+    { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/therockdominionschool?igsh=YzljYTk1ODg3Zg==" },
     { icon: Twitter, label: "Twitter", href: "#" },
-    { icon: Linkedin, label: "LinkedIn", href: "#" }
+    { icon: WhatsappIcon, label: "Whatsapp", href: "https://wa.link/8a5hjz" }, // Use the custom WhatsappIcon
+    { icon: Youtube, label: "Youtube", href: "https://youtube.com/@therockdominionschool?si=otJKM3QSLcVMO-n8" }
   ];
 
   const officeHours: OfficeHours[] = [

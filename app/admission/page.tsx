@@ -175,7 +175,7 @@ const AdmissionPage = () => {
             {
               icon: <Phone className="h-5 w-5 text-primary" />,
               title: "Call Us",
-              info: "+234 XXX XXX XXXX"
+              info: "+234-702-562-5816"
             },
             {
               icon: <Mail className="h-5 w-5 text-primary" />,

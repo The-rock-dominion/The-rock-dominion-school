@@ -28,7 +28,7 @@ const galleryCategories: GalleryCategory[] = [
       {
         title: 'Science Experiments',
         description: 'Hands-on experiments in fully-equipped laboratories',
-        image: '/slide 2.jpg'
+        image: '/jss class.jpg'
       },
       {
         title: 'Computer Labs',
@@ -38,7 +38,7 @@ const galleryCategories: GalleryCategory[] = [
       {
         title: 'Library Resources',
         description: 'Access to physical and digital learning materials',
-        image: '/school class rock.jpg'
+        image: '/student 5.jpg'
       }
     ]
   },
@@ -55,7 +55,7 @@ const galleryCategories: GalleryCategory[] = [
       {
         title: 'Cultural Day',
         description: "Celebrating Nigeria's rich cultural heritage",
-        image: '/cultural day.jpg'
+        image: '/Gallery cultural.jpg'
       },
       {
         title: 'Inter-House Sports',

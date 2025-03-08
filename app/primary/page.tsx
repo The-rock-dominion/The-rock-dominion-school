@@ -1,40 +1,42 @@
+
 import Image from "next/image"
 import Link from "next/link"
 
 const primarySchoolAspects = [
   {
     title: "Early Learning",
-    image: "/crech.jpg",
+    image: "/nusurey 1.jpg",
     description: "Nurturing young minds with engaging activities",
   },
   {
     title: "Literacy & Numeracy",
-    image: "/primary 2.jpg",
+    image: "/Primary 3.jpg",
     description: "Building strong foundations in reading and math",
   },
-  { title: "Creative Arts", image: "/primary.jpg", description: "Fostering creativity through various art forms" },
+  { title: "Creative Arts", image: "/Cultural day 2.jpg", description: "Fostering creativity through various art forms" },
   {
     title: "Physical Education",
-    image: "/primary 2.jpg",
+    image: "/Teacher primary.jpg",
     description: "Promoting health and teamwork through sports",
   },
   {
     title: "Science Discovery",
-    image: "/cultural day.jpg",
+    image: "/Happy student 2.jpg",
     description: "Hands-on experiments and nature exploration",
   },
-  { title: "Social Skills", image: "/primary.jpg", description: "Developing empathy and communication skills" },
+  { title: "Social Skills", image: "/Award 2.jpg", description: "Developing empathy and communication skills" },
 ]
 
 export default function PrimarySchoolPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <header className="bg-primary text-primary-foreground py-12">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">The Rock Dominion Primary 
-            School</h1>
-          <p className="text-xl md:text-2xl">Nurturing curiosity,
-             Inspiring growth</p>
+    <div className="min-h-screen bg-background text-foreground ">
+      <header className="relative bg-primary text-primary-foreground p-20 z-10">
+        <div className="absolute inset-0">
+          <Image src="/Primary banner.jpg" alt="Header Background" layout="fill" objectFit="cover" className="opacity-50" />
+        </div>
+        <div className="relative container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">The Rock Dominion Primary School</h1>
+          <p className="text-2xl md:text-3xl font-light drop-shadow-md">Nurturing curiosity, Inspiring growth</p>
         </div>
       </header>
 
@@ -85,4 +87,3 @@ export default function PrimarySchoolPage() {
     </div>
   )
 }
-

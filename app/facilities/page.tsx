@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useState } from "react"
@@ -33,7 +34,7 @@ const facilities: Facilities = {
       "High-speed internet access for research and virtual learning",
       "Multimedia projectors to enhance visual learning",
     ],
-    images: ["/slide 3.jpg", "/school class rock.jpg", "/classroom3.jpg"],
+    images: ["/SS class 2.jpg", "/school class rock.jpg", "/Teacher 1.jpg"],
   },
   library: {
     title: "Library",
@@ -43,7 +44,7 @@ const facilities: Facilities = {
       "E-learning resources and computer stations",
       "Dedicated reading zones",
     ],
-    images: ["/library1.jpg", "/library2.jpg", "/library3.jpg"],
+    images: ["/student with book.jpg"],
   },
   laboratories: {
     title: "Science Laboratories",
@@ -53,7 +54,7 @@ const facilities: Facilities = {
       "Chemistry Lab - Stocked with reagents and safety equipment",
       "Biology Lab - For anatomy, ecology, and botany studies",
     ],
-    images: ["/lab1.jpg", "/lab2.jpg", "/lab3.jpg"],
+    images: ["/teacher secondary 2.jpg"],
   },
   sports: {
     title: "Sports Facilities",
@@ -63,7 +64,7 @@ const facilities: Facilities = {
       "Basketball court for team sports",
       "Indoor games area",
     ],
-    images: ["/sports1.jpg", "/sports2.jpg", "/sports3.jpg"],
+    images: ["/rock (3).jpg", "/sports2.jpg", "/sports3.jpg"],
   },
   ict: {
     title: "ICT Facility",
@@ -73,13 +74,13 @@ const facilities: Facilities = {
       "High-speed internet for research",
       "Interactive smart boards and projectors",
     ],
-    images: ["/ict1.jpg", "/ict2.jpg", "/ict3.jpg"],
+    images: ["/teacher 1.jpg", "/ict2.jpg", "/ict3.jpg"],
   },
   medical: {
     title: "Medical Care",
     description: "Comprehensive healthcare facilities",
     features: ["Fully equipped sick bay", "Emergency response protocols", "Routine health check-ups"],
-    images: ["/medical1.jpg", "/medical2.jpg", "/medical3.jpg"],
+    images: ["/school building 4.jpg", "/medical2.jpg", "/medical3.jpg"],
   },
 }
 
@@ -90,8 +91,8 @@ const FacilitiesPage = () => {
     <div className="min-h-screen bg-background">
       <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/facilities-hero.jpg" alt="School Facilities" fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-primary/60 backdrop-blur-sm" />
+          <Image src="/facilities banner.jpg" alt="School Facilities" fill className="object-cover" priority />
+          <div className="absolute inset-0 bg-primary/60" />
         </div>
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           <motion.h1

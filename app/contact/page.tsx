@@ -67,7 +67,7 @@ const ContactPage: React.FC = () => {
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
       title: "Email Us",
-      info: "info@rockdominion.edu.ng",
+      info: "therockdominionschool@gmail.com",
       action: "Send email"
     },
     {

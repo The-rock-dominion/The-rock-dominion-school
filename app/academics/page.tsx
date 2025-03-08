@@ -462,11 +462,11 @@ const AcademicsPage = () => {
                   </div>
                   <div className="flex items-center justify-center gap-2">
                     <Phone className="h-5 w-5 text-primary" />
-                    <span>[Insert Contact Number]</span>
+                    <span>+234-702-562-5816</span>
                   </div>
                   <div className="flex items-center justify-center gap-2">
                     <Mail className="h-5 w-5 text-primary" />
-                    <span>[Insert Email Address]</span>
+                    <span>therockdominionschool@gmail.com</span>
                   </div>
                   <div className="flex items-center justify-center gap-2">
                     <GlobeIcon className="h-5 w-5 text-primary" />

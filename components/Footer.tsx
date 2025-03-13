@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-12 text-center border-t border-primary-foreground/20 pt-8">
-          <p className="text-sm">&copy; 2025 The Rock Dominion. All rights reserved.</p>
+          <p className="text-sm">&copy; 2025 Baztutar Academy. All rights reserved.</p>
         </div>
       </div>
     </footer>

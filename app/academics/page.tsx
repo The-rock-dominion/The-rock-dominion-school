@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -42,11 +43,13 @@ const AcademicsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Blue */}
-      <section className="relative h-[60vh] bg-primary">
+      <section className="relative h-[40vh] md:h-[60vh] bg-primary">
         <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80" />
         <div className="container relative z-10 h-full flex flex-col justify-center text-primary-foreground px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Academics at The Rock Dominion</h1>
-          <p className="text-xl md:text-2xl max-w-3xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
+            Academics at The Rock Dominion
+          </h1>
+          <p className="text-lg sm:text-xl md:text-2xl max-w-3xl">
             A leading private school in Ogun State, offering world-class education through 
             Nigerian-American curriculum and innovative learning approaches.
           </p>
@@ -55,12 +58,12 @@ const AcademicsPage = () => {
 
       <main className="divide-y divide-gray-100">
         {/* Overview Section - White */}
-        <section className="bg-background py-16">
-          <div className="container mx-auto px-4">
+        <section className="bg-background py-8 md:py-16">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-6 bg-accent">
+              <Card className="p-4 md:p-6 bg-accent">
                 <CardHeader>
-                  <h2 className="text-3xl font-bold text-primary">Our Academic Approach</h2>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-8 text-primary">Our Academic Approach</h2>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-lg">
@@ -85,7 +88,7 @@ const AcademicsPage = () => {
               </Card>
               
               <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-primary">Educational Programs</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-8 text-primary">Educational Programs</h2>
                 <div className="grid gap-4">
                   {[
                     "Early Childhood Education",
@@ -105,10 +108,10 @@ const AcademicsPage = () => {
         </section>
 
         {/* Academic Programs - Blue */}
-        <section className="bg-primary/5 py-16">
-          <div className="container mx-auto px-4">
+        <section className="bg-primary/5 py-8 md:py-16">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <Tabs defaultValue="early-years" className="space-y-8">
-              <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <TabsList className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
                 <TabsTrigger value="early-years">Early Years</TabsTrigger>
                 <TabsTrigger value="primary">Primary</TabsTrigger>
                 <TabsTrigger value="junior-secondary">Junior Secondary</TabsTrigger>
@@ -116,7 +119,7 @@ const AcademicsPage = () => {
               </TabsList>
 
               <TabsContent value="early-years">
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
                   <ProgramCard
                     title="Early Childhood Development"
                     icon={<BookOpen className="h-6 w-6 text-primary" />}
@@ -130,7 +133,7 @@ const AcademicsPage = () => {
                     ]}
                     description="Montessori-based approach for comprehensive early development"
                   />
-                  <Card className="p-6">
+                  <Card className="p-4 md:p-6">
                     <CardHeader>
                       <h3 className="text-xl font-bold">Learning Environment</h3>
                     </CardHeader>
@@ -139,10 +142,6 @@ const AcademicsPage = () => {
                         <li className="flex items-center gap-2">
                           <Lightbulb className="h-5 w-5 text-primary" />
                           <span>Child-centered learning spaces</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <Music className="h-5 w-5 text-primary" />
-                          <span>Creative expression zones</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Palette className="h-5 w-5 text-primary" />
